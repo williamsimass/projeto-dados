@@ -175,7 +175,7 @@ const DataDisplay = () => {
       {/* Botões separados */}
       <FiltroAvancadoButton onClick={showModal} />
       <GerarRelatorioButton onClick={showConfirmModal} />
-      <UploadButton onClick={showModal}/>
+      
 
       {/* Modal para selecionar colunas */}
       <Modal

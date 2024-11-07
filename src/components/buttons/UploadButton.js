@@ -2,7 +2,7 @@ import React from 'react';
 import { Upload, Button } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
 
-const UploadButton = ({ onUpload }) => {
+const UploadButton = ({ onUpload, disabled }) => {
   const props = {
     beforeUpload: (file) => {
       const reader = new FileReader();
@@ -20,6 +20,7 @@ const UploadButton = ({ onUpload }) => {
       <Button
         icon={<UploadOutlined />}
         style={{ marginBottom: '16px', marginLeft: '8px' }} // Ajuste do padding
+        disabled={disabled} // Define se o botão está desabilitado
       >
         Upload de Arquivo
       </Button>
