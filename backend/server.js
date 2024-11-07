@@ -35,6 +35,6 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(port, '0.0.0.0', () => {
-  console.log(`Servidor rodando em http://165.227.84.203:${port}`);
+  console.log(`Servidor rodando em http://165.227.84.203:5000`);
 });
 
