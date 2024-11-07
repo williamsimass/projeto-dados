@@ -22,7 +22,7 @@ const DataDisplay = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/dados');
+        const response = await axios.get('https://projeto-dados.onrender.com/api/dados');
         setData(response.data);
         setFilteredData(response.data);
         setLoading(false);

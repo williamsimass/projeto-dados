@@ -29,12 +29,19 @@ app.get('/api/dados', async (req, res) => {
     res.status(500).json({ error: 'Erro ao buscar dados' });
   }
 });
+
+// Rota para a raiz ("/")
+app.get('/', (req, res) => {
+  res.send('Servidor rodando! Acesse /api/dados para ver os dados.');
+});
+
+// Middleware de tratamento de erros
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send({ message: 'Ocorreu um erro no servidor', error: err.message });
 });
 
+// Iniciando o servidor
 app.listen(port, '0.0.0.0', () => {
-  console.log(`Servidor rodando em http://165.227.84.203:5000`);
+  console.log(`Servidor rodando em http://165.227.84.203:${port}`);
 });
-
